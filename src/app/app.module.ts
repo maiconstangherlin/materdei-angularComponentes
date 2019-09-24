@@ -1,23 +1,21 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import { ComponentesComponent } from './componentes/componentes.component';
+import { AppMaterialModule } from './app-material.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ComponentesComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCheckboxModule
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
