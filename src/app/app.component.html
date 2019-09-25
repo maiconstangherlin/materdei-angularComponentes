@@ -1,7 +1,12 @@
 <mat-toolbar color="primary">
-    <a mat-button>
-        Lista
-    </a>
+    <div>
+        <button mat-button [routerLink]="['']">
+            <mat-icon>home</mat-icon> Início
+        </button>
+        <button mat-button [routerLink]="['/cadastro']" >
+            <mat-icon>list_alt</mat-icon> Cadastro
+        </button>
+    </div>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
