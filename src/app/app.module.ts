@@ -1,25 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { AppMaterialModule } from './app-material.module';
-
-import { HomeComponent } from './home/home.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
+import { MzInputModule, MzDatepickerModule } from 'ngx-materialize'
+import { MaterialDesignComponent } from './material-design/material-design.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    CadastroComponent
+    MaterialDesignComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    AppMaterialModule,
+    FormsModule,
+    BrowserAnimationsModule,    
+    MzInputModule, MzDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
