@@ -5,7 +5,9 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MzInputModule, MzDatepickerModule } from 'ngx-materialize'
+import { MzInputModule, 
+         MzDatepickerModule,
+         MzRadioButtonModule } from 'ngx-materialize'
 import { MaterialDesignComponent } from './material-design/material-design.component';
 
 @NgModule({
@@ -18,7 +20,7 @@ import { MaterialDesignComponent } from './material-design/material-design.compo
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,    
-    MzInputModule, MzDatepickerModule
+    MzInputModule, MzDatepickerModule, MzRadioButtonModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
