@@ -7,7 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MzInputModule, 
          MzDatepickerModule,
-         MzRadioButtonModule } from 'ngx-materialize'
+         MzRadioButtonModule,
+         MzButtonModule,
+         MzSelectModule,
+         MzCollapsibleModule,
+         MzTextareaModule  } from 'ngx-materialize'         
 import { MaterialDesignComponent } from './material-design/material-design.component';
 
 @NgModule({
@@ -20,7 +24,13 @@ import { MaterialDesignComponent } from './material-design/material-design.compo
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,    
-    MzInputModule, MzDatepickerModule, MzRadioButtonModule 
+    MzInputModule, 
+    MzDatepickerModule, 
+    MzRadioButtonModule, 
+    MzButtonModule, 
+    MzSelectModule,
+    MzCollapsibleModule,
+    MzTextareaModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
