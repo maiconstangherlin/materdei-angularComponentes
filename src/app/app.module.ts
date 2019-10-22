@@ -11,13 +11,15 @@ import { MzInputModule,
          MzButtonModule,
          MzSelectModule,
          MzCollapsibleModule,
-         MzTextareaModule  } from 'ngx-materialize'         
+         MzTextareaModule  } from 'ngx-materialize';
+import { PessoaFormComponent } from './material-design/original/pessoaForm.component';
 import { MaterialDesignComponent } from './material-design/material-design.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MaterialDesignComponent
+    MaterialDesignComponent,
+    PessoaFormComponent
   ],
   imports: [
     BrowserModule,

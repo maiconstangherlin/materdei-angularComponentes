@@ -5,7 +5,7 @@
             <h5 class="center-align">Cadastro de pessoas</h5>
 
             <mz-collapsible [mode]="'expandable'">
-                <!-- Dados Pessoais -->
+                <!-- Dados pessoais -->
                 <mz-collapsible-item [active]="true">
                     <mz-collapsible-item-header>
                         <i class="material-icons">
@@ -25,13 +25,12 @@
                         <div class="row">
                             <div class="col s6">
                                 <mz-radio-button-container class="col s6 m4">
-                                    <input mz-radio-button [label]="'Feminino'" [withGap]="true" id="radio-button-id"
-                                        name="radio-group" type="radio" value="Feminino">
+                                    <input mz-radio-button [label]="'Masculino'" [withGap]="true"
+                                           id="masculino" name="genero" type="radio" value="Masculino">
                                 </mz-radio-button-container>
-
                                 <mz-radio-button-container class="col s6 m4">
-                                    <input mz-radio-button [label]="'Masculino'" [withGap]="true" id="radio-button-id2"
-                                        name="radio-group" type="radio" value="Masculino">
+                                    <input mz-radio-button [label]="'Feminino'" [withGap]="true"
+                                           id="feminino" name="genero" type="radio" value="Feminino">
                                 </mz-radio-button-container>
                             </div>
                         </div>
@@ -41,55 +40,32 @@
                 <!-- Endereço -->
                 <mz-collapsible-item>
                     <mz-collapsible-item-header>
-                        <i class="material-icons">
-                            account_balance
-                        </i>
+                        <i class="material-icons">account_balance</i>
                         <span class="vertical-align-super">Endereço</span>
                     </mz-collapsible-item-header>
                     <mz-collapsible-item-body>
                         <div class="row">
-                            <div class="col s6">
+                            <div class="col s12 m6">
                                 <mz-select-container>
-                                    <select mz-select id="cidade" [label]="'Cidade'">
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
+                                    <select mz-select id="cidade" [label]="'Cidade'">                                        
+                                        <option>Dois Vizinhos</option>
+                                        <option>Francisco Beltrão</option>
+                                        <option>Pato Branco</option>
                                     </select>
                                 </mz-select-container>
                             </div>
-                            <div class="col s6">
+                            <div class="col s12 m6">
                                 <mz-select-container>
-                                    <select mz-select id="bairro" [label]="'Bairro'">
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
+                                    <select mz-select id="bairro" [label]="'Bairro'">                                        
+                                        <option>Centro</option>                                    
                                     </select>
                                 </mz-select-container>
                             </div>
                         </div>
                     </mz-collapsible-item-body>
                 </mz-collapsible-item>
-
-                <!-- Observações -->
-                <mz-collapsible-item>
-                    <mz-collapsible-item-header>
-                        <i class="material-icons">
-                            play_for_work
-                        </i>
-                        <span class="vertical-align-super">Observações</span>
-                    </mz-collapsible-item-header>
-                    <mz-collapsible-item-body>
-                        <mz-textarea-container>
-                            <textarea mz-textarea [label]="'Observações'" id="observacoes"
-                                 length="500"></textarea>
-                        </mz-textarea-container>
-                    </mz-collapsible-item-body>
-                </mz-collapsible-item>
             </mz-collapsible>
+
         </form>
-        <div class="card-content"></div>
-        <div class="right-align">
-            <button mz-button>
-                salvar
-            </button>
-        </div>
     </div>
 </div>
