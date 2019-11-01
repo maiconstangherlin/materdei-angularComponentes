@@ -1,3 +1,7 @@
+import { PessoaListOriginalComponent } from './original/pessoaList.component';
+import { PessoaFormOriginalComponent } from './original/pessoaForm.component';
+
+import { PessoaListComponent } from './material-design/pessoa-list.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -11,15 +15,18 @@ import { MzInputModule,
          MzButtonModule,
          MzSelectModule,
          MzCollapsibleModule,
-         MzTextareaModule  } from 'ngx-materialize';
-import { PessoaFormComponent } from './original/pessoaForm.component';
+         MzTextareaModule,
+         MzCollectionModule  } from 'ngx-materialize';
 import { MaterialDesignComponent } from './material-design/material-design.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MaterialDesignComponent,
-    PessoaFormComponent
+    PessoaListComponent,
+    
+    PessoaListOriginalComponent,
+    PessoaFormOriginalComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,8 @@ import { MaterialDesignComponent } from './material-design/material-design.compo
     MzButtonModule, 
     MzSelectModule,
     MzCollapsibleModule,
-    MzTextareaModule 
+    MzTextareaModule,
+    MzCollectionModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

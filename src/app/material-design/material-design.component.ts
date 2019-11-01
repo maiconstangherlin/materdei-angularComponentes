@@ -1,26 +1,26 @@
-import { LocalStorageService } from './service/localStorage.service';
+import { PessoaStorageService } from './service/pessoaStorage.service';
 import { Pessoa } from './models/Pessoa';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-material-design',
   templateUrl: './material-design.component.html',
 })
-export class MaterialDesignComponent implements OnInit {
+export class MaterialDesignComponent {  
 
-  pessoa: Pessoa;
   cidades = this.getCidades();
   bairros = this.getBairros();
 
-  constructor() { }
+  @Input() pessoa: Pessoa;
+  @Output() close = new EventEmitter<void>();
 
-  ngOnInit() {
-    this.pessoa = new Pessoa();
+  cancelar(): void {
+    this.close.emit();
   }
 
   salvar(): void {
-    console.log(this.pessoa);
-    LocalStorageService.saveList('pessoa', this.pessoa);
+    PessoaStorageService.saveList(this.pessoa);
+    this.close.emit();
   }
 
   getCidades(): string[] {

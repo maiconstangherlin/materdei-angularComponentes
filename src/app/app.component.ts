@@ -1,22 +1,30 @@
-import { Pessoa } from './pessoa';
 import { Component } from '@angular/core';
+import { Pessoa } from './pessoa';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent { 
+export class AppComponent {
+  pessoa: Pessoa = new Pessoa();
 
-  listaPessoa: Pessoa[] = [];
-  nome: string;
-  sobrenome: string;
+  cadastroAberto = false;
+  listaAberta = true;
 
-  cliquei() : void {
-    let pessoa = new Pessoa();
-    pessoa.nome = this.nome;
-    pessoa.sobrenome = this.sobrenome;
-    
-    this.listaPessoa.push(pessoa);
+  novoCadastro(): void {
+    this.pessoa = new Pessoa();
+    this.cadastroAberto = true;
+    this.listaAberta = false;
+  }
+
+  abreCadastro(pessoa: Pessoa): void {
+    this.pessoa = pessoa;
+    this.cadastroAberto = true;
+    this.listaAberta = false;
+  }
+
+  fechaCadastro(): void {
+    this.listaAberta = true;
+    this.cadastroAberto = false;
   }
 }

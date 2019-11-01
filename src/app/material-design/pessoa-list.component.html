@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card">
+        <div class="right-align">
+            <button mz-button (click)="novo()">
+                novo
+            </button>
+        </div>
+
+        <h5 class="center-align">Lista de Pessoas</h5>
+
+        <mz-collection>
+            <mz-collection-item *ngFor="let pessoa of pessoaList">
+                {{pessoa.nome}} {{pessoa.sobrenome}}
+
+                <a mz-secondary-content (click)="editar(pessoa)">
+                    <i class="material-icons" style="cursor: pointer;">
+                        send
+                    </i>
+                </a>
+            </mz-collection-item>
+        </mz-collection>
+    </div>
+</div>

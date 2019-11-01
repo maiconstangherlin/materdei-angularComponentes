@@ -1,25 +1,26 @@
+import { PessoaStorageService } from './../material-design/service/pessoaStorage.service';
 import { Pessoa } from '../material-design/models/Pessoa';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'pessoa-form',
+  selector: 'original-pessoa-form',
   templateUrl: './pessoaForm.component.html',
-  styleUrls: ['./pessoaForm.component.scss'],
 })
-export class PessoaFormComponent implements OnInit {
+export class PessoaFormOriginalComponent {
 
-  pessoa: Pessoa;
   cidades = this.getCidades();
   bairros = this.getBairros();
 
-  constructor() { }
+  @Input() pessoa: Pessoa;
+  @Output() close = new EventEmitter<void>();
 
-  ngOnInit() {
-    this.pessoa = new Pessoa();
+  cancelar(): void {
+    this.close.emit();
   }
 
   salvar(): void {
-    console.log(this.pessoa);
+    PessoaStorageService.saveList(this.pessoa);
+    this.close.emit();
   }
 
   getCidades(): string[] {
@@ -29,4 +30,5 @@ export class PessoaFormComponent implements OnInit {
   getBairros(): string[] {
     return ["", "Centro", "Industrial", "Planalto"]
   }
+
 }

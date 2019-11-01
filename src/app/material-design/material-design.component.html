@@ -34,7 +34,7 @@
                                 <mz-radio-button-container class="col s6 m4">
                                     <input mz-radio-button [label]="'Feminino'" [withGap]="true" id="radio-button-id"
                                         name="radio-group" type="radio" value="Feminino" [(ngModel)]="pessoa.genero">
-                                </mz-radio-button-container>                                
+                                </mz-radio-button-container>
                             </div>
                         </div>
                     </mz-collapsible-item-body>
@@ -89,6 +89,9 @@
         </form>
         <div class="card-content"></div>
         <div class="right-align">
+            <button mz-button (click)="cancelar()">
+                cancelar
+            </button>
             <button mz-button (click)="salvar()">
                 salvar
             </button>
