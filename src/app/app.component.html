@@ -9,6 +9,6 @@
 
 
 <!-- <app-pessoa-list *ngIf="listaAberta" (editarCadastro)="abreCadastro($event)" (novoCadastro)="novoCadastro()">
-</app-pessoa-list> -->
+</app-pessoa-list>
 
-<app-material-design></app-material-design>
+<app-material-design *ngIf="cadastroAberto" [pessoa]="pessoa" (close)="fechaCadastro()"></app-material-design> -->
