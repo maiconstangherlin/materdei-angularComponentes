@@ -12,7 +12,7 @@ import { MzInputModule,
          MzSelectModule,
          MzCollapsibleModule,
          MzTextareaModule  } from 'ngx-materialize';
-import { PessoaFormComponent } from './material-design/original/pessoaForm.component';
+import { PessoaFormComponent } from './original/pessoaForm.component';
 import { MaterialDesignComponent } from './material-design/material-design.component';
 
 @NgModule({

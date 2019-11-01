@@ -1,4 +1,4 @@
-import { Pessoa } from './Pessoa';
+import { Pessoa } from '../material-design/models/Pessoa';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
