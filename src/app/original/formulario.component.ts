@@ -1,12 +1,12 @@
-import { PessoaStorageService } from './../material-design/service/pessoaStorage.service';
-import { Pessoa } from '../material-design/models/Pessoa';
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Pessoa } from '../material-design/models/pessoa';
+import { PessoaStorageService } from '../material-design/service/pessoaStorage.service';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'original-pessoa-form',
-  templateUrl: './pessoaForm.component.html',
+  selector: 'app-formulario',
+  templateUrl: './formulario.component.html',
 })
-export class PessoaFormOriginalComponent {
+export class FormularioComponent {
 
   cidades = this.getCidades();
   bairros = this.getBairros();

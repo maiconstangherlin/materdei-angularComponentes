@@ -1,10 +1,10 @@
-import { Pessoa } from '../models/Pessoa';
+import { Pessoa } from '../models/pessoa';
 
 export class PessoaStorageService {
 
     private static CHAVE_PESSOA: string = "PESSOA_LIST";
 
-    static save(valor: any): void {
+    static saveStatico(valor: any): void {
         localStorage.setItem(this.CHAVE_PESSOA, JSON.stringify(valor));
     }
 
@@ -20,13 +20,12 @@ export class PessoaStorageService {
         }
     }
 
-    static getList() : Pessoa[] {
+    static getList(): Pessoa[] {
         const lista = localStorage.getItem(this.CHAVE_PESSOA);
 
-        if (lista){
+        if (lista) {
             return JSON.parse(lista);
         }
         return;
     }
-
 }

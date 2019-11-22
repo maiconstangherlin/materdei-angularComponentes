@@ -1,4 +1,4 @@
-import { Genero } from './Genero';
+import { Genero } from './genero';
 
 export class Pessoa {
     nome: string;

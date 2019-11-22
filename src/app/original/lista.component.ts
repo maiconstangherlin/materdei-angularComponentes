@@ -1,13 +1,13 @@
-import { PessoaStorageService } from './../material-design/service/pessoaStorage.service';
-import { Pessoa } from './../pessoa';
+import { Pessoa } from '../material-design/models/pessoa';
+import { PessoaStorageService } from '../material-design/service/pessoaStorage.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'original-pessoa-list',
-  templateUrl: './pessoaList.component.html',
+  selector: 'app-lista',
+  templateUrl: './lista.component.html',
 })
 
-export class PessoaListOriginalComponent implements OnInit {
+export class ListaComponent implements OnInit {
 
   pessoaList: Pessoa[];
 

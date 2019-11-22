@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Pessoa } from './pessoa';
+import { Pessoa } from './material-design/models/pessoa';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,6 @@ import { Pessoa } from './pessoa';
 })
 export class AppComponent {
   pessoa: Pessoa = new Pessoa();
-
   cadastroAberto = false;
   listaAberta = true;
 
